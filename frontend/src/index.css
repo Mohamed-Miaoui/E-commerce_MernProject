@@ -56,18 +56,10 @@ button:focus-visible {
 */
 *{margin: 0;}
 body {
+  margin: 0;
   /* poppins font is imported from google fonts by a in index.html */
   font-family: 'poppins'; 
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-} 
+

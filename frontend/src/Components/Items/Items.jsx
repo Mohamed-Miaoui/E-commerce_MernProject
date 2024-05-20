@@ -6,7 +6,7 @@ import { Item } from "../Item/Item";
 export const Items = () => {
   return (
     <div className="items">
-      <h1>Popular in women</h1>
+      <h1>Popular in console & accessories</h1>
       <hr />
       <div className="each-item">
         {data_product.map((item, i) => {

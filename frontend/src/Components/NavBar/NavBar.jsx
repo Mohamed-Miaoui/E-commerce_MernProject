@@ -11,14 +11,14 @@ export const NavBar = () => {
   return (
     <div className="navbar">
       <div className="nav-logo">
-        <img src={logo}></img>
+        <img className="logo" src={logo}></img>
         <p>SHOP</p>
       </div>
       <ul className="nav-menu">
         <li onClick={() => {setMenu("shop")}}> <Link style={{textDecoration:'none'}} to='/'> Shop </Link> {menu ==="shop" ? <hr/>:<></>} </li>
-        <li onClick={() => {setMenu("men")}}> <Link style={{textDecoration:'none'}} to='/men'> Men </Link> {menu ==="men" ? <hr/>:<></>}</li>
-        <li onClick={() => {setMenu("women")}}> <Link style={{textDecoration:'none'}} to='/women'> Women </Link> {menu ==="women" ? <hr/>:<></>}</li>
-        <li onClick={() => {setMenu("kid")}}> <Link style={{textDecoration:'none'}} to='/kid'> Kid </Link>{menu ==="kid" ? <hr/>:<></>}</li>
+        <li onClick={() => {setMenu("console")}}> <Link style={{textDecoration:'none'}} to='/console'> Console & accessories </Link> {menu ==="console" ? <hr/>:<></>}</li>
+        <li onClick={() => {setMenu("game")}}> <Link style={{textDecoration:'none'}} to='/game'> Games </Link> {menu ==="game" ? <hr/>:<></>}</li>
+        <li onClick={() => {setMenu("credit")}}> <Link style={{textDecoration:'none'}} to='/credit'> Credit Cards </Link>{menu ==="credit" ? <hr/>:<></>}</li>
       </ul>
       <div className="nav-login-cart">
         <Link to= "/login"><button>Login</button></Link>

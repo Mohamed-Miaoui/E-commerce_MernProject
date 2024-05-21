@@ -21,3 +21,12 @@
     display: flex;
     gap: 30px;
 }
+
+@media(max-width: 638px)
+{
+    .rp-item{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+    }
+}

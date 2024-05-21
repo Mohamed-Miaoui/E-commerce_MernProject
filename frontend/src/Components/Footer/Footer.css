@@ -57,3 +57,39 @@
 .logo{
     max-width: 100px;
 }
+
+@media(max-width :907px ){
+    .footer {
+        gap: 30px;
+    
+    }
+    .footer-logo {
+        gap: 10px;
+    }
+    .footer-logo p {
+        font-size: 25px;
+        font-weight: 700;
+    }
+    .footer-links {
+        gap: 30px;
+        font-size: 14px;
+    }
+    .footer-social-icons{
+        gap: 15px;
+    }
+
+    .footer-copyright {
+        gap: 30px;
+        width: 100%;
+        margin-bottom: 20px;
+        font-size: 14px;
+    }
+    .footer-copyright hr {
+        width: 80%;
+        height: 3px;
+    }
+    
+    .logo{
+        max-width: 70px;
+    }
+}

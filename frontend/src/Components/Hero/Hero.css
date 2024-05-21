@@ -54,3 +54,213 @@
 .hero-img{
     max-width: 800px;
 }
+
+/* Responsive hero  */
+@media(max-width: 1338px){
+    .hero{
+        background: linear-gradient(180deg,#8959a3c2,#e1ffea22 60%);
+        display: flex;
+        margin-bottom: 50px;
+        padding-top: 40px;
+    }
+    .hero-img{
+        max-width: 600px;
+    }
+    .hero-left{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+        padding-left: 180px;
+        line-height: 1;
+    }
+    .hero-left h2 {
+        color: #090909;
+        font-size: 22px;
+        font-weight: 600;
+    
+    }
+    .hero-left p {
+      color: #171717;
+      font-size: 65px;
+      font-weight: 700;  
+    }
+    .hero-hand-icon {
+        display: flex;
+        align-items: center;
+        gap: 18px;  
+      }
+      .hero-hand-icon img {
+          width: 85px;
+      }
+      .hero-latest-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 13px;
+        height: 60px;
+        width: 270px;
+        border-radius: 75px;
+        margin-top: 26px;
+        background: #ff4141;
+        font-size: 20px;
+        font-weight: 500px;
+    }
+}
+@media(max-width: 1144px){
+    .hero{
+        background: linear-gradient(180deg,#8959a3c2,#e1ffea22 60%);
+        display: flex;
+        margin-bottom: 33px;
+        padding-top: 24px;
+    }
+    .hero-img{
+        max-width: 500px;
+    }
+    .hero-left{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        padding-left: 180px;
+        line-height: 1;
+    }
+    .hero-left h2 {
+        color: #090909;
+        font-size: 19px;
+        font-weight: 600;
+    
+    }
+    .hero-left p {
+      color: #171717;
+      font-size: 52px;
+      font-weight: 700;  
+    }
+    .hero-hand-icon {
+        display: flex;
+        align-items: center;
+        gap: 16px;  
+      }
+      .hero-hand-icon img {
+          width: 65px;
+      }
+      .hero-latest-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 11px;
+        height: 50px;
+        width: 220px;
+        border-radius: 75px;
+        margin-top: 20px;
+        background: #ff4141;
+        font-size: 16px;
+        font-weight: 500px;
+    }
+}
+@media(max-width: 956px){
+    .hero{
+        background: linear-gradient(180deg,#8959a3c2,#e1ffea22 60%);
+        display: flex;
+        margin-bottom: 25px;
+        padding-top: 20px;
+    }
+    .hero-img{
+        max-width: 300px;
+    }
+    .hero-left{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        padding-left: 130px;
+        line-height: 1;
+    }
+    .hero-left h2 {
+        color: #090909;
+        font-size: 14px;
+        font-weight: 600;
+    
+    }
+    .hero-left p {
+      color: #171717;
+      font-size: 32px;
+      font-weight: 700;  
+    }
+    .hero-hand-icon {
+        display: flex;
+        align-items: center;
+        gap: 14px;  
+      }
+      .hero-hand-icon img {
+          width: 45px;
+      }
+      .hero-latest-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 11px;
+        height: 50px;
+        width: 220px;
+        border-radius: 75px;
+        margin-top: 20px;
+        background: #ff4141;
+        font-size: 16px;
+        font-weight: 500px;
+    }
+}
+@media(max-width: 724px){
+    .hero{
+        background: linear-gradient(180deg,#8959a3c2,#e1ffea22 60%);
+        display: flex;
+        margin-bottom: 20px;
+        padding-top: 15px;
+    }
+    .hero-img{
+        max-width: 200px;
+    }
+    .hero-left{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        padding-left: 100px;
+        line-height: 1;
+    }
+    .hero-left h2 {
+        color: #090909;
+        font-size: 12px;
+        font-weight: 600;
+    
+    }
+    .hero-left p {
+      color: #171717;
+      font-size: 24px;
+      font-weight: 700;  
+    }
+    .hero-hand-icon {
+        display: flex;
+        align-items: center;
+        gap: 12px;  
+      }
+      .hero-hand-icon img {
+          width: 20px;
+      }
+      .hero-latest-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 9px;
+        height: 35px;
+        width: 160px;
+        border-radius: 75px;
+        margin-top: 14px;
+        background: #ff4141;
+        font-size: 12px;
+        font-weight: 500px;
+    }
+}

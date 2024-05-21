@@ -6,11 +6,11 @@ export const LoginSignup = () => {
       <div className="loginsignup-container">
         <h1>Sign Up</h1>
         <div className="loginsignup-fields">
-          <input type="text" placeholder="your name" />
-          <input type="email" placeholder="your email" />
-          <input type="password" placeholder="your password" />
+          <input type="text" placeholder="Name" />
+          <input type="email" placeholder="Email" />
+          <input type="password" placeholder="Password" />
         </div>
-        <button>Continue</button>
+        <button className="button-hover">Continue</button>
         <p className="loginsignup-login">
           Already have an account <span>login here</span>
         </p>

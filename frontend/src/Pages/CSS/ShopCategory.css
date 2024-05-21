@@ -35,3 +35,15 @@
     font-size: 18px;
     font-weight: 500;
 }
+
+/* Responsive */
+@media(max-width: 610px){
+/* I make products appear on a grid of 2 collumns */
+.shopcategory-products{
+    margin: 20px 100px;
+    display: grid;
+    grid-template-columns:  1fr 1fr ;
+     row-gap: 20px; 
+     place-items: center;
+}
+}

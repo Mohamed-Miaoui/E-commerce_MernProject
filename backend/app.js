@@ -12,6 +12,8 @@ const cors = require("cors")
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
+//app routes
+var productsRouter = require('./routes/Prodcut');
 
 app.use(express.json());
 app.use(cors())
@@ -22,6 +24,10 @@ app.use(cookieParser());
 //dummy routes
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+
+
+//app routes
+app.use('/product', productsRouter);
 
 
 //Image Storage config (local)

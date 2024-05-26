@@ -60,77 +60,83 @@ export const AddProduct = () => {
   };
 
   return (
-    <div className="addproduct">
-      <div className="addp-itemfield">
-        <p>Product Title</p>
-        <input
-          value={producDetails.name}
-          onChange={handleChange}
-          type="text"
-          name="name"
-          placeholder="Type Here"
-        />
-      </div>
-      <div className="addp-price">
+    <>
+      <div className="addproduct">
+        <h1>Add Product</h1>
         <div className="addp-itemfield">
-          <p>Price</p>
+          <p>Product Title</p>
           <input
-            value={producDetails.old_price}
+            value={producDetails.name}
             onChange={handleChange}
             type="text"
-            name="old_price"
+            name="name"
             placeholder="Type Here"
           />
         </div>
+        <div className="addp-price">
+          <div className="addp-itemfield">
+            <p>Price</p>
+            <input
+              value={producDetails.old_price}
+              onChange={handleChange}
+              type="text"
+              name="old_price"
+              placeholder="Type Here"
+            />
+          </div>
+          <div className="addp-itemfield">
+            <p>Offer Price</p>
+            <input
+              value={producDetails.new_price}
+              onChange={handleChange}
+              type="text"
+              name="new_price"
+              placeholder="Type Here"
+            />
+          </div>
+        </div>
         <div className="addp-itemfield">
-          <p>Offer Price</p>
-          <input
-            value={producDetails.new_price}
+          <p>Product Category</p>
+          <select
+            value={producDetails.category}
             onChange={handleChange}
-            type="text"
-            name="new_price"
-            placeholder="Type Here"
+            name="category"
+            className="addp-selector"
+          >
+            <option value="console & accessories">
+              {" "}
+              console & accessories
+            </option>
+            <option value="game"> game</option>
+            <option value="credit"> credit</option>
+          </select>
+        </div>
+        <div className="addp-itemfield">
+          <p>Product Image</p>
+          <label htmlFor="file-input">
+            <img
+              src={image ? URL.createObjectURL(image) : upload_area}
+              className="addp-thumbnail-img"
+            />
+          </label>
+          <input
+            onChange={handleImage}
+            type="file"
+            name="image"
+            id="file-input"
+            hidden
           />
         </div>
-      </div>
-      <div className="addp-itemfield">
-        <p>Product Category</p>
-        <select
-          value={producDetails.category}
-          onChange={handleChange}
-          name="category"
-          className="addp-selector"
+        <button
+          onClick={() => {
+            handleSubmit();
+          }}
+          className="addp-button"
         >
-          <option value="console & accessories"> console & accessories</option>
-          <option value="game"> game</option>
-          <option value="credit"> credit</option>
-        </select>
+          {" "}
+          Add
+        </button>
       </div>
-      <div className="addp-itemfield">
-        <p>Product Image</p>
-        <label htmlFor="file-input">
-          <img
-            src={image ? URL.createObjectURL(image) : upload_area}
-            className="addp-thumbnail-img"
-          />
-        </label>
-        <input
-          onChange={handleImage}
-          type="file"
-          name="image"
-          id="file-input"
-          hidden
-        />
-      </div>
-      <button
-        onClick={() => {
-          handleSubmit();
-        }}
-        className="addp-button"
-      >
-        {" "}
-        Add
-      </button>
-    </div>
+    </>
   );
 };

@@ -8,9 +8,8 @@ import { Shop } from "./Pages/Shop";
 import console_banner from "./Components/Assets/banner_console.jpg";
 import game_banner from "./Components/Assets/banner_game.jpg";
 import credit_banner from "./Components/Assets/banner_credit.png";
-import { Admin } from "./AdminPanel/Pages/Admin/Admin";
-import { AddProduct } from "./AdminPanel/Components/AddProduct/AddProduct";
-import { ListProduct } from "./AdminPanel/Components/ListProduct/ListProduct";
+import { AddPage } from "./AdminPanel/Pages/AddPage/AddPage";
+import { Products } from "./AdminPanel/Pages/Products/Products";
 
 //prettier-ignore
 function App() {
@@ -32,9 +31,8 @@ function App() {
       </Routes>
     {/* admin routes */}
       <Routes>
-      <Route path="/admin" element={<Admin></Admin>}></Route>
-      <Route path="/addproduct" element={<AddProduct/>}></Route>
-      <Route path="/listproduct" element={<ListProduct/>}></Route>
+      <Route path="/admin/addproduct" element={<AddPage/>}></Route>
+      <Route path="/admin/listproduct" element={<Products/>}></Route>
       </Routes>
       </BrowserRouter>
     </>

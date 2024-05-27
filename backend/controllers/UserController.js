@@ -29,6 +29,31 @@ const signUp = async (req,res) =>{
         res.json({success:true,token})
 }
 
+const login = async (req,res) =>{
+    let user =await User.findOne({email:req.body.email});
+    if(user)
+        {
+            const passCompare = req.body.password ===user.password;
+            if(passCompare)
+                {
+                    const data = {
+                        user:{
+                            id:user.id
+                        }
+                    }
+                    const token = jwt.sign(data,'secret_ecom')
+                    res.json({success:true,token})
+                }
+                else{
+                    res.json({success:false,error:"wrong password"})
+                }
+        }
+        else{
+            res.json({success:false,error:"wrong email"})
+        }
+}
+
 module.exports = {
-    signUp
+    signUp,
+    login
 }

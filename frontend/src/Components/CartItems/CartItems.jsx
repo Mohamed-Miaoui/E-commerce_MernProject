@@ -1,10 +1,14 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import "./CartItems.css";
 import { ShopContext } from "../../Context/ShopContext";
 import remove_icon from "../Assets/cart_cross_icon.png";
 export const CartItems = () => {
   const { all_product, cartItems, removeFromCart, getTotalCartAmounts } =
     useContext(ShopContext);
+
+  useEffect(() => {
+    console.log(cartItems);
+  });
   return (
     <div className="cartitems">
       <div className="ci-format-main">
@@ -16,29 +20,28 @@ export const CartItems = () => {
         <p>Remove</p>
       </div>
       <hr />
-      {all_product.map((e) => {
-        if (cartItems[e.id] > 0) {
-          return (
-            <div>
-              <div className="ci-format ci-format-main">
-                <img src={e.image} alt="" className="ci-product-icon" />
-                <p>{e.name}</p>
-                <p>${e.new_price}</p>
-                <button className="ci-quantity">{cartItems[e.id]}</button>
-                <p>${e.new_price * cartItems[e.id]}</p>
-                <img
-                  className="ci-remove-icon"
-                  src={remove_icon}
-                  alt=""
-                  onClick={() => {
-                    removeFromCart(e.id);
-                  }}
-                />
-              </div>
-            </div>
-          );
-        }
-        return null;
+      {Object.entries(cartItems).map(([itemId, quantity]) => {
+        // Skip rendering if quantity is 0
+        if (quantity === 0) return null;
+
+        const item = all_product.find((product) => product._id === itemId);
+        if (!item) return null;
+
+        return (
+          <div key={itemId} className="ci-format ci-format-main">
+            <img src={item.image} alt="" className="ci-product-icon" />
+            <p>{item.name}</p>
+            <p>${item.new_price}</p>
+            <button className="ci-quantity">{quantity}</button>
+            <p>${item.new_price * quantity}</p>
+            <img
+              className="ci-remove-icon"
+              src={remove_icon}
+              alt=""
+              onClick={() => removeFromCart(itemId)}
+            />
+          </div>
+        );
       })}
       <div className="ci-down">
         <div className="ci-total">

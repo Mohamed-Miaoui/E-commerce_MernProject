@@ -1,19 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Items.css";
-import data_product from "../Assets/data";
 import { Item } from "../Item/Item";
 
 export const Items = () => {
+  const [popularInCandA, setPopularInCandA] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:8000/product/populair")
+      .then((response) => response.json())
+      .then((data) => setPopularInCandA(data));
+  }, []);
   return (
     <div className="items">
       <h1>Popular in console & accessories</h1>
       <hr />
       <div className="each-item">
-        {data_product.map((item, i) => {
+        {popularInCandA.map((item, i) => {
           return (
             <Item
               key={i}
-              id={item.id}
+              id={item._id}
               name={item.name}
               image={item.image}
               new_price={item.new_price}

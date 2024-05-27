@@ -9,16 +9,14 @@ import { Footer } from "../Components/Footer/Footer";
 import { NavBar } from "../Components/NavBar/NavBar";
 
 export const Product = () => {
-  const { all_product } = useContext(ShopContext);
   const { productId } = useParams();
-  const product = all_product.find((e) => e.id === Number(productId));
   return (
     <div>
       <NavBar />
-      <Breadcrum product={product} />
-      <ProductDisplay product={product} />
+      <Breadcrum productId={productId} />
+      <ProductDisplay productId={productId} />
       <DescriptionBox />
-      <RelatedProducts />
+      <RelatedProducts productId={productId} />
       <Footer />
     </div>
   );

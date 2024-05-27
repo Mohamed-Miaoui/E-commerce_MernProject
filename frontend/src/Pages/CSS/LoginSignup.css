@@ -17,7 +17,7 @@
 .loginsignup-container{
     width: 500px;
     height: 600px;
-    background: rgba(197 114 219 / 31%);
+    background: rgba(75 116 141 / 36%);
     margin: auto;
     padding: 40px 60px;
     border: 2px solid white;
@@ -75,11 +75,13 @@
     margin-top: 20px;
     color: #fff8f8;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 20px;
 }
 .loginsignup-login span {
     color: #ff4141;
     font-weight: 600;
+    cursor: pointer;
+    font-weight: bold;
 }
 .loginsignup-agree{
     display: flex;

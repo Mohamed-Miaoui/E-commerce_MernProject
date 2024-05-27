@@ -75,6 +75,10 @@
 .logo{
     max-width: 50px;
 }
+.link{
+    text-decoration: none;
+    color: #171717;
+}
 
 
 /* Responsive Logic */

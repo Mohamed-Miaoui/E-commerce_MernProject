@@ -5,6 +5,7 @@ import cart_icon from "../Assets/cart_icon.png";
 import { Link } from "react-router-dom";
 import { ShopContext } from "../../Context/ShopContext";
 import nav_dropdown from "../Assets/nav-dropdown.png";
+import toast, { Toaster } from "react-hot-toast";
 
 //prettier-ignore
 export const NavBar = () => {
@@ -18,6 +19,7 @@ export const NavBar = () => {
       e.target.classList.toggle('open'); //icon rotation change from css when clicked on
     }
 
+  
 
   return (
     <div className="navbar">
@@ -36,7 +38,7 @@ export const NavBar = () => {
       <div className="nav-login-cart">
         {/* display of login or sign up based on the presence of token */}
         {localStorage.getItem('auth-token') ?
-        <button onClick={()=>{localStorage.removeItem('auth-token');window.location.replace("/")}}>Logout</button>
+        <button onClick={()=>{localStorage.removeItem('auth-token');window.location.replace("/") }}>Logout</button>
         :<Link to= "/login"><button>Login</button></Link>}
         
         <Link to= "/cart"><img src={cart_icon}></img></Link>

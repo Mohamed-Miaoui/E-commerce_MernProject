@@ -38,6 +38,7 @@
     height: 3px;
     border-radius: 30px;
     background-color: #ff4141 ;
+    margin-top: 5px;
 }
 .nav-login-cart{
     display: flex;

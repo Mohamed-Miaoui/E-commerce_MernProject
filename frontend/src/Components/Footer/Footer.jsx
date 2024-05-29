@@ -5,11 +5,20 @@ import instagram_icon from "../Assets/instagram_icon.png";
 import pintester_icon from "../Assets/pintester_icon.png";
 import whatsapp_icon from "../Assets/whatsapp_icon.png";
 export const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   return (
     <div className="footer">
       <div className="footer-logo">
-        <img className="logo" src={footer_logo} alt="" />
-        <p>Shop</p>
+        <img
+          onClick={scrollToTop}
+          className="logo"
+          src={footer_logo}
+          alt=""
+          style={{ cursor: "pointer" }}
+        />
+        <p>Gamix</p>
       </div>
       <ul className="footer-links">
         <li>Company</li>

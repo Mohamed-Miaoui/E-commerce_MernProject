@@ -1,4 +1,5 @@
 import React, { createContext, useEffect, useState } from "react";
+import toast from "react-hot-toast";
 // import all_product from "../../src/Components/Assets/all_product";
 export const ShopContext = createContext(null);
 
@@ -49,6 +50,7 @@ const ShopContextPovider = (props) => {
         .then((response) => response.json())
         .then((data) => console.log(data));
     }
+    toast.success("Product added Successfully ! ");
   };
   const removeFromCart = (itemId) => {
     setCartItems((prev) => {
@@ -73,29 +75,9 @@ const ShopContextPovider = (props) => {
         .then((response) => response.json())
         .then((data) => console.log(data));
     }
+    toast.success("Product is removed ! ");
   };
-  // const removeFromCart = async (itemId) => {
-  //   await fetch(`http://localhost:8000/product/deleteproduct/${itemId}`)
-  //     .then((response) => response.json())
-  //     .then((data) => setCartItems((prev) => ({ ...prev, data })));
-  //   console.log(cartItems);
-  // };
 
-  // const getTotalCartAmounts = () => {
-  //   let totalAmount = 0;
-  //   for (const item in cartItems) {
-  //     console.log(cartItems);
-  //     //get all items in cart (cartItems[item]= nb of a specifique item in cart)
-  //     if (cartItems[item] > 0) {
-  //       let itemInfo = all_product.find(
-  //         (product) => product.id === Number(item)
-  //       );
-  //       totalAmount += itemInfo.new_price * cartItems[item];
-  //       console.log(totalAmount);
-  //     }
-  //   }
-  //   return totalAmount;
-  // };
   const getTotalCartAmounts = () => {
     let totalAmount = 0;
     for (const itemId in cartItems) {

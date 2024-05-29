@@ -43,6 +43,19 @@ const login = async (req,res) =>{
                             id:user.id
                         }
                     }
+                    //check and add  products not intalized in user cart (added after the user creation)
+                    const products = await Product.find()
+                    for (let i = 0; i < products.length; i++) {
+                        const productId = products[i]._id.toString();
+                       if(!user.cartData.hasOwnProperty(productId)){
+                        user.cartData = {
+                            ...user.cartData,
+                            [productId]: 0,
+                            
+                          };
+                        await user.save();
+                       }
+                    }
                     const token = jwt.sign(data,'secret_ecom')
                     res.json({success:true,token})
                 }
